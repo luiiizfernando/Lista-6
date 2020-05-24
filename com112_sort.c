@@ -167,16 +167,16 @@ int particiona(int *v, int inicio, int final, int *comparacao, int *movimento)
     pivo = v[inicio];
     while(esq < dir)
     {
-        *comparacao = *comparacao + 1;
         while(esq <= final && v[esq] <= pivo)
         {
             esq++;
+            *comparacao = *comparacao + 1;
         }
 
-        *comparacao = *comparacao + 1;
         while(dir >= 0 && v[dir] > pivo)
         {
             dir--;
+            *comparacao = *comparacao + 1;
         }
 
         if(esq < dir)
